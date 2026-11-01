@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>x_Shadow — White Black Neon</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Space Grotesk',sans-serif;background:#ffffff;color:#000}
+.mono{font-family:'JetBrains Mono',monospace}
+.neon{box-shadow:0 0 20px rgba(0,0,0,0.15), 0 0 40px rgba(16,185,129,0.15)}
+.neon-border{border:1px solid #000; box-shadow:4px 4px 0px #000}
+.neon-border:hover{box-shadow:6px 6px 0px #000; transform:translate(-2px,-2px)}
+.card{transition:0.2s}
+</style>
+</head>
+<body class="bg-white">
+
+<!-- TOP NEON BAR -->
+<div class="bg-black text-white text-center py-2 mono text-[11px] font-bold tracking-widest">x_Shadow // WHITE BLACK NEON EDITION // TRIAL 3x ONLY → PREMIUM UNLIMITED</div>
+
+<nav class="flex justify-between items-center px-6 md:px-10 py-4 bg-white border-b-2 border-black sticky top-0 z-50">
+  <div class="flex items-center gap-3">
+    <div class="w-10 h-10 bg-black text-white rounded-lg flex items-center justify-center font-bold text-lg border-2 border-black shadow-[3px_3px_0px_#000]">X</div>
+    <b class="text-xl">x_Shadow</b>
+    <span id="trialBadge" class="ml-2 mono text-[10px] px-3 py-1 bg-black text-white rounded-full">TRIAL 3/3</span>
+  </div>
+  <button onclick="buyPremium()" class="bg-black text-white px-6 py-2.5 rounded-full font-bold text-sm neon">Buy Premium</button>
+</nav>
+
+<section class="px-6 md:px-10 py-14 grid md:grid-cols-2 gap-10 items-center bg-white">
+  <div>
+    <span class="mono text-[11px] border-2 border-black px-3 py-1 rounded-full bg-white">LIMITED EDITION • 87 COMMANDS</span>
+    <h1 class="text-5xl md:text-7xl font-bold mt-6 leading-[0.85]">x_Shadow<br><span class="text-white" style="-webkit-text-stroke:2px #000">is watching.</span></h1>
+    <p class="text-black/60 mt-5 max-w-lg">Bot WA misterius FarrSopan. Coba 3x gratis. Abis itu wajib Premium Unlimited ke <b>085123149062</b></p>
+    
+    <div class="mt-8 grid grid-cols-3 gap-3">
+      <div class="bg-white border-2 border-black p-4 rounded-xl text-center shadow-[4px_4px_0px_#000]"><p class="mono text-[10px]">LIMIT</p><p id="limitCount" class="text-2xl font-bold">3</p></div>
+      <div class="bg-white border-2 border-black p-4 rounded-xl text-center shadow-[4px_4px_0px_#000]"><p class="mono text-[10px]">LEVEL</p><p class="text-2xl font-bold">8</p></div>
+      <div class="bg-black text-white border-2 border-black p-4 rounded-xl text-center shadow-[4px_4px_0px_#000]"><p class="mono text-[10px]">STATUS</p><p id="statusPrem" class="text-xl font-bold">Trial</p></div>
+    </div>
+
+    <div class="mt-6 flex gap-3">
+      <button onclick="useTrial()" class="bg-black text-white px-7 py-3.5 rounded-full font-bold w-full border-2 border-black shadow-[4px_4px_0px_#000]">Coba (<span id="btnTrial">3</span>x)</button>
+      <button onclick="buyPremium()" class="bg-white text-black px-7 py-3.5 rounded-full w-full border-2 border-black shadow-[4px_4px_0px_#000] font-bold">Order WA</button>
+    </div>
+  </div>
+
+  <div class="bg-white border-2 border-black rounded-[24px] p-6 shadow-[8px_8px_0px_#000]">
+    <h3 class="font-bold text-lg">Pilih Paket Premium</h3>
+    <p class="mono text-[11px] text-black/50">Order langsung ke 085123149062</p>
+    <div class="mt-5 space-y-3">
+      <div onclick="buyPremium('weekly')" class="p-4 rounded-xl border-2 border-black flex justify-between cursor-pointer bg-white hover:bg-black hover:text-white"><div><b>Weekly</b><p class="mono text-[11px] opacity-60">7 hari unlimited</p></div><b>15K</b></div>
+      <div onclick="buyPremium('monthly')" class="p-4 rounded-xl border-2 border-black bg-black text-white flex justify-between cursor-pointer shadow-[4px_4px_0px_#000]"><div><b>Monthly • BEST SELLER</b><p class="mono text-[11px] opacity-70">30 hari + priority support</p></div><b class="text-emerald-400">35K</b></div>
+      <div onclick="buyPremium('unlimited')" class="p-4 rounded-xl border-2 border-black flex justify-between cursor-pointer bg-white hover:bg-black hover:text-white"><div><b>Unlimited LIFETIME</b><p class="mono text-[11px] opacity-60">Selamanya, no limit</p></div><b>75K</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMANDS WHITE BLACK NEON -->
+<section class="px-6 md:px-10 pb-20 bg-[#f5f5f5] border-t-2 border-black pt-10">
+  <h2 class="mono text-sm font-bold mb-6">x_Shadow:~$ ls --all 87 commands [WHITE BLACK NEON]</h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+    <div class="card bg-white border-2 border-black p-5 rounded-xl shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm">MENU LAINNYA</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="bg-black text-white px-2 py-1 rounded">!Language</span><span class="bg-black text-white px-2 py-1 rounded">!MenuGrup</span><span class="bg-black text-white px-2 py-1 rounded">!MenuGame</span><span class="bg-black text-white px-2 py-1 rounded">!Download</span></div></div>
+
+    <div class="card bg-black text-white border-2 border-black p-5 rounded-xl shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm text-emerald-400">AI ASSISTANT (7)</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="bg-white text-black px-2 py-1 rounded">!AI</span><span class="bg-white text-black px-2 py-1 rounded">!Ask</span><span class="bg-white text-black px-2 py-1 rounded">!Assistant</span><span class="bg-white text-black px-2 py-1 rounded">!RpStyle</span><span class="bg-white text-black px-2 py-1 rounded">!SetModel</span><span class="bg-white text-black px-2 py-1 rounded">!ResetSesi</span><span class="bg-white text-black px-2 py-1 rounded">!RevertSesi</span></div></div>
+
+    <div class="card bg-white border-2 border-black p-5 rounded-xl shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm">AI TOOLS (5)</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="border border-black px-2 py-1 rounded">!Gemini</span><span class="border border-black px-2 py-1 rounded">!Solver</span><span class="border border-black px-2 py-1 rounded">!Vision</span><span class="border border-black px-2 py-1 rounded">!Qwen</span><span class="border border-black px-2 py-1 rounded">!Deepseek</span></div></div>
+
+    <div class="card bg-white border-2 border-black p-5 rounded-xl shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm">STICKER MAKER (4)</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="border border-black px-2 py-1 rounded">!Sticker</span><span class="border border-black px-2 py-1 rounded">!ToImage</span><span class="border border-black px-2 py-1 rounded">!StickerMeme</span><span class="border border-black px-2 py-1 rounded">!StickerNobg</span></div></div>
+
+    <div class="card bg-white border-2 border-black p-5 rounded-xl lg:col-span-2 shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm">AI PROCESSING (11)</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="border border-black px-2 py-1 rounded">!ToFigure</span><span class="border border-black px-2 py-1 rounded">!AiEdit</span><span class="border border-black px-2 py-1 rounded">!AgnesVideo</span><span class="border border-black px-2 py-1 rounded">!Diffusion</span><span class="border border-black px-2 py-1 rounded">!Remini</span><span class="border border-black px-2 py-1 rounded">!Waifu2X</span><span class="border border-black px-2 py-1 rounded">!Recolor</span><span class="border border-black px-2 py-1 rounded">!ImgFilter</span><span class="border border-black px-2 py-1 rounded">!ToReal</span><span class="border border-black px-2 py-1 rounded">!JadiKartun</span><span class="border border-black px-2 py-1 rounded">!RemoveBG</span></div></div>
+
+    <div class="card bg-white border-2 border-black p-5 rounded-xl shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm">ANIME & MANGA (9)</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="border border-black px-2 py-1 rounded">!Anime</span><span class="border border-black px-2 py-1 rounded">!Waifu</span><span class="border border-black px-2 py-1 rounded">!Husbu</span><span class="border border-black px-2 py-1 rounded">!TopAnime</span><span class="border border-black px-2 py-1 rounded">!TopMale</span><span class="border border-black px-2 py-1 rounded">!TopFemale</span><span class="border border-black px-2 py-1 rounded">!TopSong</span><span class="border border-black px-2 py-1 rounded">!WhatAnime</span><span class="border border-black px-2 py-1 rounded">!Ongoing</span></div></div>
+
+    <div class="card bg-white border-2 border-black p-5 rounded-xl lg:col-span-2 shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm">GAME GUIDE (11)</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="border border-black px-2 py-1 rounded">!GTGuide</span><span class="border border-black px-2 py-1 rounded">!HSRGuide</span><span class="border border-black px-2 py-1 rounded">!WuWaGuide</span><span class="border border-black px-2 py-1 rounded">!GenshinGuide</span><span class="border border-black px-2 py-1 rounded">!EndfieldGuide</span><span class="border border-black px-2 py-1 rounded">!ZZZGuide</span><span class="border border-black px-2 py-1 rounded">!BAGuide</span><span class="border border-black px-2 py-1 rounded">!NTEGuide</span><span class="border border-black px-2 py-1 rounded">!GenshinAkun</span><span class="border border-black px-2 py-1 rounded">!UsernameML</span><span class="border border-black px-2 py-1 rounded">!UsernameFF</span></div></div>
+
+    <div class="card bg-white border-2 border-black p-5 rounded-xl shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm">INFORMASI (6)</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="border border-black px-2 py-1 rounded">!JadwalSholat</span><span class="border border-black px-2 py-1 rounded">!InfoGempa</span><span class="border border-black px-2 py-1 rounded">!BeritaBaru</span><span class="border border-black px-2 py-1 rounded">!InfoKurs</span><span class="border border-black px-2 py-1 rounded">!Crypto</span><span class="border border-black px-2 py-1 rounded">!Cuaca</span></div></div>
+
+    <div class="card bg-white border-2 border-black p-5 rounded-xl shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm">SEARCH (10)</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="border border-black px-2 py-1 rounded">!YtSearch</span><span class="border border-black px-2 py-1 rounded">!Play</span><span class="border border-black px-2 py-1 rounded">!Lens</span><span class="border border-black px-2 py-1 rounded">!CariKerja</span><span class="border border-black px-2 py-1 rounded">!Dracin</span><span class="border border-black px-2 py-1 rounded">!CariLagu</span><span class="border border-black px-2 py-1 rounded">!Shazam</span><span class="border border-black px-2 py-1 rounded">!Image</span><span class="border border-black px-2 py-1 rounded">!Quotes</span><span class="border border-black px-2 py-1 rounded">!Fact</span></div></div>
+
+    <div class="card bg-white border-2 border-black p-5 rounded-xl shadow-[4px_4px_0px_#000]"><h3 class="font-bold text-sm">UTILITAS/TOOLS (16)</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="border border-black px-2 py-1 rounded">!MenuBrat</span><span class="border border-black px-2 py-1 rounded">!Math</span><span class="border border-black px-2 py-1 rounded">!Nulis</span><span class="border border-black px-2 py-1 rounded">!Lyric</span><span class="border border-black px-2 py-1 rounded">!SSWeb</span><span class="border border-black px-2 py-1 rounded">!MemeMaker</span><span class="border border-black px-2 py-1 rounded">!JpVoice</span><span class="border border-black px-2 py-1 rounded">!Prompter</span><span class="border border-black px-2 py-1 rounded">!GoogleVoice</span><span class="border border-black px-2 py-1 rounded">!TextToSpeak</span><span class="border border-black px-2 py-1 rounded">!AudioToText</span><span class="border border-black px-2 py-1 rounded">!ImageToText</span><span class="border border-black px-2 py-1 rounded">!QuotesCard</span><span class="border border-black px-2 py-1 rounded">!IQC</span><span class="border border-black px-2 py-1 rounded">!Translate</span><span class="border border-black px-2 py-1 rounded">!ToMp3</span></div></div>
+
+    <div class="card bg-black text-white border-2 border-black p-5 rounded-xl md:col-span-3 shadow-[6px_6px_0px_#000]"><h3 class="font-bold text-sm text-emerald-400">MENU BOT (18) — PREMIUM GATE</h3><div class="flex flex-wrap gap-1.5 mt-3 text-[11px] mono"><span class="bg-white text-black px-2 py-1 rounded">!Setclub</span><span class="bg-white text-black px-2 py-1 rounded">!Shop</span><span class="bg-white text-black px-2 py-1 rounded">!BotInfo</span><span class="bg-white text-black px-2 py-1 rounded">!Rules</span><span class="bg-white text-black px-2 py-1 rounded">!Delete</span><span class="bg-white text-black px-2 py-1 rounded">!Level</span><span class="bg-white text-black px-2 py-1 rounded">!GlobalRank</span><span class="bg-white text-black px-2 py-1 rounded">!TopCoin</span><span class="bg-white text-black px-2 py-1 rounded">!SetName</span><span class="bg-white text-black px-2 py-1 rounded">!Info</span><span class="bg-white text-black px-2 py-1 rounded">!Owner</span><span class="bg-white text-black px-2 py-1 rounded">!Ping</span><span class="bg-white text-black px-2 py-1 rounded">!CekPremium</span><span class="bg-white text-black px-2 py-1 rounded">!BuyPremium</span><span class="bg-white text-black px-2 py-1 rounded">!BuyCredit</span><span class="bg-white text-black px-2 py-1 rounded">!Claim</span><span class="bg-white text-black px-2 py-1 rounded">!Redeem</span></div></div>
+
+  </div>
+</section>
+
+<div id="premiumModal" class="fixed inset-0 bg-white/80 backdrop-blur hidden items-center justify-center z-[100] p-6">
+  <div class="bg-white border-2 border-black rounded-2xl p-7 max-w-md w-full text-center shadow-[8px_8px_0px_#000]">
+    <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center mx-auto text-xl font-bold">!</div>
+    <h2 class="text-2xl font-bold mt-4">Trial Habis!</h2>
+    <p class="text-black/60 text-sm mt-2">Lu udah pakai 3x gratis. Chat owner di <b>085123149062</b> untuk Premium Unlimited.</p>
+    <button onclick="buyPremium('unlimited')" class="mt-6 w-full bg-black text-white py-3 rounded-full font-bold">Order Unlimited - 75K → WA</button>
+    <button onclick="closeModal()" class="mt-3 w-full border-2 border-black py-3 rounded-full text-sm font-bold">Nanti dulu</button>
+  </div>
+</div>
+
+<footer class="text-center py-10 mono text-[11px] border-t-2 border-black bg-white">x_Shadow © 2026 • Owner: 085123149062 • White Black Neon • 87 Commands</footer>
+
+<script>
+let trials = localStorage.getItem('x_shadow_trials');
+if(trials===null){ trials=3; localStorage.setItem('x_shadow_trials',3); }
+trials=parseInt(trials);
+function updateUI(){
+  document.getElementById('limitCount').innerText=trials;
+  document.getElementById('btnTrial').innerText=trials;
+  document.getElementById('trialBadge').innerText= trials>0 ? `TRIAL ${trials}/3` : 'LOCKED';
+  if(trials<=0){ document.getElementById('statusPrem').innerText='Locked'; }
+}
+updateUI();
+function useTrial(){
+  if(trials<=0){ openModal(); return; }
+  trials--; localStorage.setItem('x_shadow_trials',trials); updateUI();
+  alert(`Berhasil! Sisa trial: ${trials}x`);
+  if(trials===0){ setTimeout(openModal,500); }
+}
+function openModal(){ document.getElementById('premiumModal').classList.remove('hidden'); document.getElementById('premiumModal').classList.add('flex'); }
+function closeModal(){ document.getElementById('premiumModal').classList.add('hidden'); }
+function buyPremium(paket='monthly'){
+  let harga = paket==='weekly'?'15K':paket==='monthly'?'35K':'75K';
+  let pesan = `Halo tuan FarrSopan (x_Shadow)%0ASaya mau order *PREMIUM ${paket.toUpperCase()} - ${harga}*%0ANo: 085123149062%0A%0ASudah coba 3x trial, mau unlimited.%0AMohon aktivasi.`;
+  window.open(`https://wa.me/6285123149062?text=${pesan}`, '_blank');
+}
+</script>
+</body>
+      </html>
